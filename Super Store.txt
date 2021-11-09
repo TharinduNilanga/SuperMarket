@@ -1,0 +1,115 @@
+DROP DATABASE IF EXISTS SuperStore;
+CREATE DATABASE SuperStore;
+SHOW DATABES;
+USE SuperStore;
+
+////////////////////////////
+DROP TABLE  Admin;
+CREATE TABLE IF NOT EXISTS Admin(
+	adminId VARCHAR(10),
+	userName VARCHAR(20),
+	password VARCHAR(200),
+	CONSTRAINT PRIMARY KEY(adminId)
+);
+//////////////////////////
+DROP TABLE Cashier;
+CREATE TABLE IF NOT EXISTS Cashier(
+	cashierId VARCHAR(10),
+	userName VARCHAR(20),
+	password VARCHAR(200),
+	CONSTRAINT PRIMARY KEY(cashierId)
+);
+/////////////////////////////
+CREATE TABLE IF NOT EXISTS Customer(
+	custId VARCHAR(6),
+	custTitle VARCHAR(5),
+	custName VARCHAR(30),
+	custAddress VARCHAR(30),
+	city VARCHAR(20),
+	Province VARCHAR(20),
+	postalCode VARCHAR(9),
+	CONSTRAINT PRIMARY KEY(custId)
+);
+show tables;
+desc customer;
+/////////////////////////
+
+CREATE TABLE IF NOT EXISTS Item(
+	itemCode VARCHAR(6),
+	description VARCHAR(50),
+	packSize VARCHAR(20),
+	unitPrice double,
+	QtyOnHand INT(5),
+	CONSTRAINT PRIMARY KEY(itemCode)
+);
+show tables;
+desc item;
+DROP TABLE IF EXISTS `Order`;
+DROP TABLE IF EXISTS `OrderDetails`;
+////////////////////////////
+
+CREATE TABLE IF NOT EXISTS `Order`(
+	orderId VARCHAR(6),
+	orderDate DATE,
+	custId VARCHAR(6),
+	Total double,
+	CONSTRAINT PRIMARY KEY(orderId),
+	CONSTRAINT FOREIGN KEY(custId) REFERENCES Customer(custId)ON DELETE CASCADE ON UPDATE CASCADE
+);
+show tables;
+desc `order`;
+////////////////////////
+
+CREATE TABLE IF NOT EXISTS `OrderDetails`(
+	orderId VARCHAR(6),
+	itemCode VARCHAR(6),
+	orderQty INT(11),
+	discount INT(10),
+	Total double,
+	CONSTRAINT FOREIGN KEY(orderId) REFERENCES `Order`(orderId)ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT FOREIGN KEY(itemCode) REFERENCES Item(itemCode)ON DELETE CASCADE ON UPDATE CASCADE
+);
+show tables;
+desc `orderDetails`;
+/////////////////////////
+CREATE TABLE IF NOT EXISTS ReturnOrder(
+	returnId VARCHAR(10),
+	orderId VARCHAR(6),
+	itemCode VARCHAR(6),
+	orderQty INT(11),
+	discount INT(10),
+	Total double,
+	CONSTRAINT PRIMARY KEY(returnId),
+	CONSTRAINT FOREIGN KEY(orderId) REFERENCES `Order`(orderId)ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT FOREIGN KEY(itemCode) REFERENCES Item(itemCode)ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="519.0" prefWidth="950.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderDetailsFormController">
+   <children>
+      <Label fx:id="lblSuperStores" layoutX="281.0" prefHeight="69.0" prefWidth="407.0" style="-fx-background-color: white;" text="Order Details" textFill="#ff1c1c">
+         <font>
+            <Font name="ROGFonts-Regular" size="36.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="54.0" prefHeight="17.0" prefWidth="919.0" />
+      <TableView fx:id="tblOrderDetails" layoutX="64.0" layoutY="110.0" prefHeight="340.0" prefWidth="830.0">
+        <columns>
+          <TableColumn fx:id="colOId" prefWidth="154.0" text="Order Id" />
+          <TableColumn fx:id="colItemCode" prefWidth="143.0" text="Item Code" />
+            <TableColumn fx:id="colQty" prefWidth="258.0" text="Order Qty" />
+            <TableColumn fx:id="colDiscount" prefWidth="159.0" text="Discount" />
+            <TableColumn fx:id="colTotal" prefWidth="115.0" text="Total" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="53.0" fitWidth="64.0" layoutX="7.0" layoutY="8.0" onMouseClicked="#HomeOnAction">
+         <image>
+            <Image url="@assets/home-icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="519.0" prefWidth="950.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddCustomerFormController">
+   <children>
+      <Label layoutX="288.0" prefHeight="69.0" prefWidth="375.0" style="-fx-background-color: white;" text="Add Customer" textFill="#ff1c1c">
+         <font>
+            <Font name="ROGFonts-Regular" size="36.0" />
+         </font>
+      </Label>
+      <Separator layoutY="66.0" prefHeight="9.0" prefWidth="950.0" />
+      <TableView fx:id="tblCustomer" layoutX="278.0" layoutY="75.0" prefHeight="438.0" prefWidth="663.0">
+        <columns>
+          <TableColumn fx:id="colCustId" prefWidth="78.0" text="Cust Id" />
+          <TableColumn fx:id="colTitle" prefWidth="82.0" text="Cust Title" />
+            <TableColumn fx:id="colCustName" prefWidth="115.0" text="Cust Name" />
+            <TableColumn fx:id="colCustAddress" prefWidth="147.0" text="cust Address" />
+            <TableColumn fx:id="colCity" prefWidth="71.0" text="City" />
+            <TableColumn fx:id="colProvince" prefWidth="78.0" text="Province" />
+            <TableColumn fx:id="colPostalCode" prefWidth="91.0" text="Postal Code" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutY="75.0" prefHeight="438.0" prefWidth="277.0">
+         <children>
+            <JFXTextField fx:id="txtCustomerId" layoutX="10.0" layoutY="36.0" onAction="#CustomerIdOnAction" prefHeight="31.0" prefWidth="262.0" promptText="customer ID.." />
+            <JFXTextField fx:id="txtTitle" layoutX="10.0" layoutY="85.0" onAction="#TitleOnAction" prefHeight="31.0" prefWidth="262.0" promptText="enter Title..." />
+            <JFXTextField fx:id="txtName" layoutX="10.0" layoutY="135.0" onAction="#NameOnAction" prefHeight="31.0" prefWidth="262.0" promptText="enter customer Name..." />
+            <JFXTextField fx:id="txtAddress" layoutX="10.0" layoutY="188.0" onAction="#AddressOnAction" prefHeight="31.0" prefWidth="262.0" promptText="enter customer Address..." />
+            <JFXTextField fx:id="txtCity" layoutX="10.0" layoutY="240.0" onAction="#CityOnAction" prefHeight="31.0" prefWidth="262.0" promptText="enter City.." />
+            <JFXTextField fx:id="txtProvince" layoutX="10.0" layoutY="292.0" onAction="#ProvinceOnAction" prefHeight="31.0" prefWidth="262.0" promptText="enter Provice.." />
+            <JFXTextField fx:id="txtPostalCode" layoutX="8.0" layoutY="342.0" onAction="#CodeOnAction" prefHeight="31.0" prefWidth="262.0" promptText="enter Postal code.." />
+            <Button fx:id="btnDelete" layoutX="8.0" layoutY="393.0" mnemonicParsing="false" onAction="#DeleteOnAction" prefHeight="31.0" prefWidth="69.0" style="-fx-background-color: #A01109;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUpdate" layoutX="103.0" layoutY="393.0" mnemonicParsing="false" onAction="#UpdateOnAction" style="-fx-background-color: #26980E;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSave" layoutX="195.0" layoutY="393.0" mnemonicParsing="false" onAction="#SaveOnAction" prefHeight="31.0" prefWidth="77.0" style="-fx-background-color: #0E65BF;" text="Save" textFill="#e8e8e8">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblCustomerId" layoutX="212.0" layoutY="4.0" prefHeight="31.0" prefWidth="64.0" text="   C-001">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="53.0" fitWidth="64.0" layoutX="14.0" layoutY="8.0" onMouseClicked="#HomeOnAction">
+         <image>
+            <Image url="@assets/home-icon.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnAddNew" layoutX="841.0" layoutY="19.0" mnemonicParsing="false" onAction="#btnAddNew_OnAction" style="-fx-background-color: #26980E;" text="+New Item" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

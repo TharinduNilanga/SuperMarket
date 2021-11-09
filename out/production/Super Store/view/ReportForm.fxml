@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="519.0" prefWidth="950.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportFormController">
+   <children>
+      <Label fx:id="lblSuperStores" layoutX="259.0" prefHeight="69.0" prefWidth="432.0" style="-fx-background-color: white;" text="System Reports" textFill="#ff1c1c">
+         <font>
+            <Font name="ROGFonts-Regular" size="36.0" />
+         </font>
+      </Label>
+      <Separator layoutY="54.0" prefHeight="15.0" prefWidth="950.0" />
+      <ImageView fitHeight="53.0" fitWidth="64.0" layoutX="14.0" layoutY="8.0" onMouseClicked="#HomeOnAction">
+         <image>
+            <Image url="@assets/home-icon.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="82.0" layoutY="117.0" prefHeight="335.0" prefWidth="355.0" style="-fx-background-color: #E5EDF5;">
+         <children>
+            <ImageView fitHeight="127.0" fitWidth="154.0" layoutX="101.0" layoutY="14.0">
+               <image>
+                  <Image url="@assets/business-report.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="106.0" layoutY="168.0" mnemonicParsing="false" onAction="#customerReportOnAction" prefHeight="31.0" prefWidth="144.0" stylesheets="@assets/styles/button.css" text="Customer Report" />
+            <Button layoutX="106.0" layoutY="210.0" mnemonicParsing="false" onAction="#ItemReportOnAction" prefHeight="28.0" prefWidth="144.0" stylesheets="@assets/styles/button.css" text="Item Report" />
+            <Button layoutX="106.0" layoutY="299.0" mnemonicParsing="false" onAction="#returnReportOnAction" prefHeight="28.0" prefWidth="144.0" stylesheets="@assets/styles/button.css" text="Return  Report" />
+            <Button layoutX="106.0" layoutY="256.0" mnemonicParsing="false" onAction="#OrderReportOnAction" prefHeight="28.0" prefWidth="144.0" stylesheets="@assets/styles/button.css" text="Order Report" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="532.0" layoutY="117.0" prefHeight="335.0" prefWidth="355.0" style="-fx-background-color: #E5EDF5;">
+         <children>
+            <ImageView fitHeight="127.0" fitWidth="142.0" layoutX="107.0">
+               <image>
+                  <Image url="@assets/business-and-finance.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="86.0" layoutY="177.0" mnemonicParsing="false" onAction="#dailyIncomeReportOnAction" prefHeight="28.0" prefWidth="185.0" stylesheets="@assets/styles/button.css" text="Daily Income Report" />
+            <Button layoutX="78.0" layoutY="228.0" mnemonicParsing="false" onAction="#monthlyReportOnAction" prefHeight="31.0" prefWidth="199.0" stylesheets="@assets/styles/button.css" text="Monthly Income Report" />
+            <Button layoutX="86.0" layoutY="277.0" mnemonicParsing="false" onAction="#annualReportOnAction" prefHeight="31.0" prefWidth="185.0" stylesheets="@assets/styles/button.css" text="Annual Income Report" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

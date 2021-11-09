@@ -1,0 +1,20 @@
+.text-field {
+    -fx-opacity: 1.0;
+    /*-fx-font-family: Consolas;*/
+    /*-fx-font-size: 200%;*/
+}
+
+.button {
+    -fx-font-family: Consolas;
+    /*-fx-font-size: 150%;*/
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+
+    /* Remove focus highlighting */
+    -fx-focus-traversable: false;
+}
+
+.button:pressed {
+    -fx-background-color: lightgreen;
+    -fx-border-color: green;
+}

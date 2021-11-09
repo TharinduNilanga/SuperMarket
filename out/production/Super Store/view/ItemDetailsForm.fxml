@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="519.0" prefWidth="950.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemDetailsFormController">
+   <children>
+      <Label fx:id="lblSuperStores" layoutX="292.0" prefHeight="69.0" prefWidth="367.0" style="-fx-background-color: white;" text="Items  Details" textFill="#ff1c1c">
+         <font>
+            <Font name="ROGFonts-Regular" size="36.0" />
+         </font>
+      </Label>
+      <Separator layoutX="7.0" layoutY="55.0" prefHeight="16.0" prefWidth="936.0" />
+      <ImageView fitHeight="53.0" fitWidth="64.0" layoutX="14.0" layoutY="8.0" onMouseClicked="#HomeOnAction">
+         <image>
+            <Image url="@assets/home-icon.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblItem" layoutX="132.0" layoutY="69.0" prefHeight="437.0" prefWidth="702.0">
+         <columns>
+            <TableColumn fx:id="colItemCode" prefWidth="103.0" text="item code" />
+            <TableColumn fx:id="colDescription" prefWidth="200.0" text="description" />
+            <TableColumn fx:id="colPackSize" prefWidth="135.0" text="pack Size" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="119.0" text="unit price" />
+            <TableColumn fx:id="colQtyOnHand" prefWidth="144.0" text="qty on Hand" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
